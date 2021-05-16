@@ -11,4 +11,6 @@ let g:NERDCustomDelimiters = {
     \ 'xhtml': {  'left': '<!-- ', 'right': '-->', 'leftAlt': '/*','rightAlt': '*/'},
     \}
 
-call extend(g:NERDDelimiterMap, g:NERDCustomDelimiters)
+if exists("g:NERDDelimiterMap")
+    call extend(g:NERDDelimiterMap, g:NERDCustomDelimiters)
+endif
