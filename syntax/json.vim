@@ -97,32 +97,31 @@ syn region  jsonFold matchgroup=jsonBraces start="\[" end=/]\(\_s\+\ze"\)\@!/ tr
 
 " Define the default highlighting.
 " Only when an item doesn't have highlighting yet
-hi def link jsonPadding         Operator
-hi def link jsonString          Type
-hi def link jsonTest            Label
-hi def link jsonEscape          Special
-hi def link jsonNumber          Number
-" hi def link jsonBraces          Statement
-hi def link jsonNull            String
-hi def link jsonBoolean         Boolean
-" hi def link jsonKeyword         Comment
+hi link jsonPadding         Operator
+hi link jsonString          Type
+hi link jsonTest            Label
+hi link jsonEscape          Special
+hi link jsonNumber          Number
+" hi link jsonBraces          Statement
+hi link jsonNull            String
+hi link jsonBoolean         Boolean
+" hi link jsonKeyword         Comment
 
 if (!exists("g:vim_json_warnings") || g:vim_json_warnings==1)
-hi def link jsonNumError        Error
-hi def link jsonCommentError    Error
-hi def link jsonSemicolonError  Error
-hi def link jsonTrailingCommaError     Error
-hi def link jsonMissingCommaError      Error
-hi def link jsonStringSQError        	Error
-hi def link jsonNoQuotesError        	Error
-hi def link jsonTripleQuotesError     	Error
+hi link jsonNumError        Error
+hi link jsonCommentError    Error
+hi link jsonSemicolonError  Error
+hi link jsonTrailingCommaError     Error
+hi link jsonMissingCommaError      Error
+hi link jsonStringSQError        	Error
+hi link jsonNoQuotesError        	Error
+hi link jsonTripleQuotesError     	Error
 endif
-hi def link jsonKeyQuote        jsonKeyword
-hi def link jsonQuote           Type
-hi def link jsonNoise           Noise
-
-hi def jsonKeyword term=bold cterm=bold gui=bold ctermfg=DarkBlue
-
+hi link jsonKeyQuote        jsonKeyword
+hi link jsonQuote           Type
+hi link jsonNoise           Noise
+hi jsonKeyword term=bold cterm=bold gui=bold ctermfg=DarkBlue
+hi jsonBraces term=bold cterm=bold gui=bold ctermfg=16
 
 let b:current_syntax = "json"
 if main_syntax == 'json'
